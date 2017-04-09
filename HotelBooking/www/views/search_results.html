@@ -42,7 +42,7 @@
 		</label>
 		<label class="item item-input">
 		  	<span class="input-label">E-mail:</span>
-		  	<input type="email" id="mail" name="mail" ng-model="booking.person.mail" required><p ng-show="!myForm.mail.$valid && myForm.mail.$dirty">X</p><p ng-show="myForm.mail.$valid">OK!</p>
+		  	<input type="email" id="mail" name="mail" ng-model="booking.person.mail" required><p class="the-invalids" ng-show="!myForm.mail.$valid && myForm.mail.$dirty">X</p><p class="the-valids" ng-show="myForm.mail.$valid">OK!</p>
 		</label>
 		<label class="item item-input">
 		  	<span class="input-label">Phone #:</span>
