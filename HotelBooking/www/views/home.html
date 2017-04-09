@@ -1,0 +1,77 @@
+<ion-content>
+	<br>
+  	<h3 class="to-center"><strong>BEGIN RESERVATION</strong></h3>
+  	<br>
+
+  	<!--detta ser till att jag inte kan välja datum som varit..-->
+	<!--Använder jQueryUI - jag fick inte till någon bra datepicker i js, angular, eller ionic-->
+  	<script>
+  		$(function(){
+	    	$( "#checkin-picker" ).datepicker({
+	    		firstDay: 1, 
+			    minDate: 0, 
+			    maxDate: 180, 
+			    showOtherMonths: true, 
+      			selectOtherMonths: true, 
+			    dateFormat: "yy-mm-dd"
+		    });
+
+	    	$( "#checkout-picker" ).datepicker({
+	    		firstDay: 1, 
+        		minDate: 1, 
+			    maxDate: 181, 
+			    showOtherMonths: true, 
+      			selectOtherMonths: true, 
+	        	dateFormat: "yy-mm-dd"
+       		});
+	 	});
+	</script>
+	<!--Här väljer vi antalet dagar och gäster för bokningen.-->
+	<ion-item>
+		<label class="item item-input">
+		  	<span class="input-label">Check-in:</span>
+		  	<input type="date" id="checkin-picker" ng-model="booking.dates.from" required>
+		</label>
+		<label class="item item-input">
+		  	<span class="input-label">Check-out:</span>
+		  	<input type="date" id="checkout-picker" ng-model="booking.dates.to" required>
+		</label>
+		<br>
+		<div class="list">
+	  		<label class="item item-input item-select">
+	    		<div class="input-label">
+	      			# of adults:
+	    		</div><!--Det gick inte att validera när det var inputs, så jag tog SELECTs ist, så behöver inget valideras.-->
+	    		<select class="to-center" ng-model="booking.guests.adults"">
+				  	<option value='1' selected>1</option>
+				  	<option value='2'>2</option>
+				  	<option value='3'>3</option>
+				  	<option value='4'>4</option>
+	    		</select>
+	  		</label>
+	  		<label class="item item-input item-select">
+	    		<div class="input-label">
+	      			# of children:
+	    		</div>
+	    		<select class="to-center" ng-model="booking.guests.children"">
+				  	<option value='0' selected>0</option>
+				  	<option value='1'>1</option>
+				  	<option value='2'>2</option>
+				  	<option value='3'>3</option>
+				  	<option value='4'>4</option>
+				  	<option value='5'>5</option>
+				  	<option value='6'>6</option>
+	    		</select>
+	  		</label>
+		</div>
+	</ion-item>
+	<br>
+	<br>
+	<br><!--Vi visar inte knappen förrän alla värden har satts..-->
+	<div ng-if="booking.dates.to && booking.dates.from && booking.guests.adults && booking.guests.children" class="to-center">
+		<button class="button button-large button-positive" ng-click="roomSelection()">
+		   ROOM SELECTION >
+		</button>
+	</div>
+	<br><br>
+</ion-content>

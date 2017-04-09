@@ -1,0 +1,52 @@
+{
+	"rooms": [
+		{
+			"id" : 1,
+			"Name": "Single Room 1",
+			"ImgURL": "/img/untitled-1.png",
+			"Descript": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam dicta est architecto quidem quibusdam quis, sequi, quisquam veniam aspernatur numquam hic error delectus deserunt dolore quia?",
+			"Price": "80",
+			"Wifi": "No"
+		},
+		{
+			"id" : 2,
+			"Name": "Single Room 2",
+			"ImgURL": "/img/untitled-2.png",
+			"Descript": "Quisquam possimus fuga magni. Non incidunt unde similique maiores iste necessitatibus, odio at suscipit nesciunt modi nostrum doloribus vitae deserunt eum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cumque ullam velit ducimus, consequatur maxime accusantium eaque quibusdam tempore doloribus ut voluptate non, molestiae itaque repudiandae eveniet odio eius esse! Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+			"Price": "90",
+			"Wifi": "Yes"
+		},
+		{
+			"id" : 3,
+			"Name": "Double Room 1",
+			"ImgURL": "/img/untitled-3.png",
+			"Descript": "Adipisicing elit. Itaque ut odit debitis quasi molestias. Earum, accusantium, reprehenderit! Commodi id consectetur sapiente eaque nemo debitis aliquid nobis, magni, qui et, temporibus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ex officia perspiciatis, quod, autem tenetur accusantium nam possimus sint facere natus fuga iure quo recusandae nostrum. Culpa tempore laborum quam.",
+			"Price": "95",
+			"Wifi": "No"
+		},
+		{
+			"id" : 4,
+			"Name": "Double Room 2",
+			"ImgURL": "/img/untitled-4.png",
+			"Descript": "Assumenda eius, delectus iure facere doloremque, similique totam, iusto voluptatem, laboriosam odit accusantium! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tempore, recusandae ut aut tenetur sed expedita alias! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate porro libero facere aspernatur repellat, ea pariatur saepe quis consequuntur perspiciatis. Fugiat explicabo at expedita, ipsum officiis. Id dolorum, dolor laudantium! Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+			"Price": "105",
+			"Wifi": "Yes"
+		},
+		{
+			"id" : 5,
+			"Name": "Family Room",
+			"ImgURL": "/img/untitled-5.png",
+			"Descript": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro a, laudantium iste veritatis vel iusto provident. Provident voluptates rem voluptatum voluptate, molestiae reprehenderit dolorum, hic reiciendis tempora tempore maxime perspiciatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum fugiat praesentium delectus unde in enim sunt molestiae quae, qui nesciunt illum iusto dolores at dignissimos temporibus, recusandae ullam quis. Sint!",
+			"Price": "130",
+			"Wifi": "Yes"
+		},
+		{
+			"id" : 6,
+			"Name": "Three Room Suite",
+			"ImgURL": "/img/untitled-6.png",
+			"Descript": "Porro a, laudantium iste veritatis vel iusto provident. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident voluptates rem voluptatum voluptate, molestiae reprehenderit dolorum, hic reiciendis tempora tempore maxime perspiciatis. Lorem ipsum dolor sit amet, cum fugiat praesentium delectus unde in enim sunt molestiae quae, qui nesciunt illum iusto dolores at dignissimos temporibus, recusandae ullam quis. Sint! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quibusdam quam eius pariatur dolorum deleniti a, ducimus incidunt distinctio magni sequi dolorem amet reprehenderit modi assumenda.",
+			"Price": "410",
+			"Wifi": "Yes"
+		}
+	]
+}

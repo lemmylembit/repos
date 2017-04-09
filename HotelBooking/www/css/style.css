@@ -1,0 +1,22 @@
+.to-center
+{
+	text-align: center;
+	align-self: center;
+	align-content: center;
+	align-items: center;
+}
+
+.descripts
+{
+	font-style: italic;
+}
+
+#checkin-picker, #checkout-picker, #adults, #children, #first, #last, #mail, #phone {
+  width: 120px;
+  margin: 0 auto;
+  padding: 7px;
+  background-color: #fcfcfc;
+  border-color: #dbdada;
+  border-style: solid;
+  border-width: 1px;
+}

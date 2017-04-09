@@ -1,0 +1,79 @@
+<br /><br /><br />
+
+<ion-content>
+	<br><br>
+	<ion-list>
+		<h3 class="to-center"><strong>ROOM SELECTION</strong></h3><br>
+      	<ion-item ng-repeat="room in booking.rooms" class="to-center">
+      		<br>
+    		<span class="descripts"><strong>{{ room.Name | uppercase }}</strong></span><br><br>
+			<img ng-src="{{ room.ImgURL }}"/><br>
+			<div class="item-text-wrap descripts">{{ room.Descript }}</div><br><br>
+			<span class="descripts">Price per night: </span> 
+			{{ room.Price }}$<br>
+			<span class="descripts">Wifi in room: </span> 
+			{{ room.Wifi }}<br><br>
+      	</ion-item>
+    </ion-list>
+    <br>
+	<div class="list">
+  		<label class="item item-input item-select">
+    		<div class="input-label">
+      			Choose room:
+    		</div><!--Här väljer vi rum och därmed också bokningens totala pris, baserat på antalet dagar vi valt..-->
+    		<select class="to-center" ng-model="roomPick" ng-change="setRoom(roomPick); calcPrice(booking.dates.from, booking.dates.to)">
+      			<option value="0">{{booking.rooms.room1.Name}}</option>
+      			<option value="1">{{booking.rooms.room2.Name}}</option>
+      			<option value="2">{{booking.rooms.room3.Name}}</option>
+      			<option value="3">{{booking.rooms.room4.Name}}</option>
+      			<option value="4">{{booking.rooms.room5.Name}}</option>
+      			<option value="5">{{booking.rooms.room6.Name}}</option>
+    		</select>
+  		</label>
+	</div>
+	<div class="form-group" ng-form name="myForm">
+		<label class="item item-input">
+		  	<span class="input-label">First name:</span>
+		  	<input type="text" id="first" name="first" ng-model="booking.person.first" required>
+		</label>
+		<label class="item item-input">
+		  	<span class="input-label">Last name:</span>
+		  	<input type="text" id="last" name="last" ng-model="booking.person.last" required>
+		</label>
+		<label class="item item-input">
+		  	<span class="input-label">E-mail adress:</span>
+		  	<input type="email" id="mail" name="mail" ng-model="booking.person.mail" required>
+		</label>
+		<label class="item item-input">
+		  	<span class="input-label">Phone number:</span>
+		  	<input type="tel" id="phone" name="phone" ng-model="booking.person.phone" required valid-number only-digits>
+		</label>
+	</div>
+	<br><br><br><!--Efter vi valt rum så visar vi all bokningsinformation, allt eftersom att vi skrivit in den.-->
+	<div class="to-center" ng-show="roomPick">
+		<p class="descripts"><strong>RESERVATION DETAILS:</strong></p><br>
+		<p class="descripts">Room: </p>
+		{{ booking.rooms.picked.Name }}<br><br><br>
+		<p class="descripts">Guests: </p>
+		{{booking.guests.adults}} adult/adults & {{booking.guests.children}} child/children<br><br><br>
+		<p class="descripts">Check-In: </p>
+		{{booking.dates.from | date:'yyyy-MM-dd'}}<br><br><br>
+		<p class="descripts">Check-Out: </p>
+		{{booking.dates.to | date:'yyyy-MM-dd'}}<br><br><br>
+		<p class="descripts">Total price: </p>
+		{{booking.totalprice}}$<br><br><br>
+		<p class="descripts" ng-show="booking.person.first">Reservation Holder: </p>
+		{{booking.person.first}} {{booking.person.last}}<br><br><br>
+		<p class="descripts" ng-show="booking.person.mail">E-Mail: </p>
+		{{booking.person.mail}}<br><br><br>
+		<p class="descripts" ng-show="booking.person.phone">Phone number: </p>
+		{{booking.person.phone}}<br><br>
+	</div>
+	<br><br><!--Vi visar inte knappen förrän informationen skrivits in.-->
+	<div ng-if="roomPick && myForm.first.$valid && myForm.last.$valid && myForm.mail.$valid && myForm.phone.$valid" class="to-center">
+		<button class="button button-large button-positive" ng-click="confirmBooking()">
+		   CONFIRM RESERVATION
+		</button>
+	</div>
+	<br><br><br>
+</ion-content>

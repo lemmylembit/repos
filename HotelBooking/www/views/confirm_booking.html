@@ -1,0 +1,29 @@
+<br /><br /><br />
+
+<ion-content>
+<br>
+	<h3 class="to-center"><strong>YOUR ROOM HAS BEEN BOOKED!</strong></h3><br>
+      	<ion-item class="to-center">
+			<br><br><!--Här återanvänder vi informationen från förra sidan..-->
+			<div class="to-center">
+				<p class="descripts"><strong>RESERVATION DETAILS:</strong></p><br>
+				<p class="descripts">Room: </p>
+				{{ booking.rooms.picked.Name }}<br><br><br>
+				<p class="descripts">Guests: </p>
+				{{booking.guests.adults}} adult/adults & {{booking.guests.children}} child/children<br><br><br>
+				<p class="descripts">Check-In: </p>
+				{{booking.dates.from | date:'yyyy-MM-dd'}}<br><br><br>
+				<p class="descripts">Check-Out: </p>
+				{{booking.dates.to | date:'yyyy-MM-dd'}}<br><br><br>
+				<p class="descripts">Total price: </p>
+				{{booking.totalprice}}$<br><br><br>
+				<p class="descripts" ng-show="booking.person.first">Reservation Holder: </p>
+				{{booking.person.first}} {{booking.person.last}}<br><br><br>
+				<p class="descripts" ng-show="booking.person.mail">E-Mail: </p>
+				{{booking.person.mail}}<br><br><br>
+				<p class="descripts" ng-show="booking.person.phone">Phone number: </p>
+				{{booking.person.phone}}<br><br>
+			</div>
+			<br><br><br>
+      	</ion-item>
+</ion-content>
